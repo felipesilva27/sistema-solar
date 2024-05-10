@@ -1,0 +1,463 @@
+* {
+    margin: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+#espaço .container{
+    display: flex;
+    min-width: fit-content;
+}
+
+#titulo{
+    position: absolute;
+    margin-left: 23%;
+    margin-top: 8%;
+    width: 15.7vw;
+}
+
+#titulo h2{
+    position: absolute;
+    font-size: 2.5vw;
+    color: white;
+    display: flex;
+    border-bottom: .7vh white solid;
+    width: inherit;
+}
+
+#espaço{
+    overflow: hidden;
+    object-fit: cover;
+    min-width: fit-content;
+}
+
+.sistema-solar{
+    position: relative;
+    width: 60vw;
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 0;
+    transform: translateY(20px);
+}
+
+.background img{
+    position: relative;
+    width: 100vw;
+    min-width: fit-content;
+    height: 100vh;
+}
+
+.background{
+    position: absolute;
+    height: 100vh;
+    min-width: fit-content;
+    overflow: hidden;
+}
+
+.container-nomes{
+    position: absolute;
+    color: white;
+    z-index: 5;
+    display: flex;
+    flex-flow: column;
+    left: 4%;
+    top: 3%;
+    margin: 2px;
+}
+
+.container-nomes h2{
+    font-size: 1.6vw;
+    margin-bottom: 7px;
+}
+
+.container-nomes a{
+    color: white;
+    align-self: center;
+    font-size: .9vw;
+}
+
+.container-nomes a:hover{
+    color: rgb(8, 179, 247);
+}
+
+@keyframes translacao {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+#sol{
+    position: absolute;
+    left: 47.8%;
+}
+
+#sol img{
+    width: 3vw;
+    aspect-ratio: 1;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0 0  50px 20px orange;
+}
+
+.translacao{
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid rgba(126, 124, 124, 0.5);
+    z-index: 0;
+    display: flex;
+    aspect-ratio: 1;
+    rotate: 90deg;
+}
+
+#t-mercurio{
+    animation: translacao 2000ms linear;
+    animation-iteration-count: infinite;
+    width: 14%;
+}
+
+#mercurio{
+    --tamanhoMercurio: 2.5vh;
+
+    animation: translacao reverse linear 2000ms infinite;
+    translate: 240% -50%;
+    height: var(--tamanhoMercurio);
+    aspect-ratio: 1;
+    rotate: -90deg;
+}
+
+#mercurio img{
+    height: var(--tamanhoMercurio);
+    aspect-ratio: 1;
+}
+
+#t-venus{
+    animation: translacao linear 3100ms infinite;
+    width: 24%;
+}
+
+#venus{
+    --tamanhoVenus: 4vh;
+    
+    animation: translacao reverse linear 3100ms infinite;
+    translate: 340% -50%;
+    height: var(--tamanhoVenus);
+    aspect-ratio: 1;
+    rotate: -90deg;
+}
+
+#venus img{
+    aspect-ratio: 1;
+    height: var(--tamanhoVenus);
+}
+
+#t-terra{
+    animation: translacao linear 5000ms infinite;
+    width: 33%;
+}
+
+#terra{
+    --tamanhoTerra: 5vh;
+
+    animation: translacao reverse linear 5000ms infinite;
+    height: var(--tamanhoTerra);
+    aspect-ratio: 1;
+    translate: 360% -50%;
+    rotate: -90deg;
+}
+
+#terra img{
+    height: var(--tamanhoTerra);
+    aspect-ratio: 1;
+}
+
+#t-marte{
+    animation: translacao linear 9400ms infinite;
+    width: 41%;
+}
+
+#marte{
+    --tamanhoMarte: 3.5vh;
+
+    animation: translacao reverse linear 9400ms infinite;
+    height: var(--tamanhoMarte);
+    aspect-ratio: 1;
+    translate: 680% -50%;
+    rotate: -90deg;
+    rotate: -90deg;
+}
+
+#marte img{
+    aspect-ratio: 1;
+    height: var(--tamanhoMarte);
+}
+
+#t-jupiter{
+    animation: translacao linear 59600ms infinite;
+    width: 52%;
+}
+
+#jupiter{
+    --tamanhoJupiter: 6vh;
+
+    animation: translacao reverse linear 59600ms infinite;
+    translate: 480% -50%;
+    height: var(--tamanhoJupiter);
+    rotate: -90deg;
+}
+
+#jupiter img{
+    rotate: 0deg;
+    height: var(--tamanhoJupiter);
+}
+
+#t-saturno{
+    animation: translacao linear 147300ms infinite;
+    width: 63%;
+}
+
+#saturno{
+    --tamanhoSaturno: 5vh;
+
+    animation: translacao reverse linear 147300ms infinite;
+    height: var(--tamanhoSaturno);
+    translate: 280% -50%;
+    rotate: -90deg;
+}
+
+#saturno img{
+    width: 5.8vw;
+    height: var(--tamanhoSaturno);
+    rotate: 45deg;
+}
+
+#t-urano{
+    animation: translacao linear 420000ms infinite;
+    width: 74.5%;
+}
+
+#urano{
+    --tamanhoUrano: 4.5vh;
+
+    animation: translacao reverse linear 420000ms infinite;
+    height: var(--tamanhoUrano);
+    translate: 495% -50%;
+    rotate: -90deg;
+}
+
+#urano img{
+    rotate: -45deg;
+    height: var(--tamanhoUrano);
+}
+
+#t-netuno{
+    animation: translacao linear 824000ms infinite;
+    width: 86%;
+}
+
+#netuno{
+    --tamanhoNetuno: 7vh;
+
+    animation: translacao reverse linear 824000ms infinite;
+    height: var(--tamanhoNetuno);
+    aspect-ratio: 1;
+    translate: 710% -50%;
+    rotate: -90deg;
+}
+
+#netuno img{
+    position: absolute;
+    height: var(--tamanhoNetuno);
+}
+
+#t-mercurio .sombra{
+    position: absolute;
+    height: 2.6vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 230% -51%;
+    box-shadow: inset 0 7px 10px;
+}
+
+#t-venus .sombra{
+    position: absolute;
+    height: 4vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 340% -50%;
+    box-shadow: inset 0 12px 10px;
+}
+
+#t-terra .sombra{
+    position: absolute;
+    height: 5vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 360% -52%;
+    box-shadow: inset 0 12px 10px;
+}
+
+#t-marte .sombra{
+    position: absolute;
+    height: 3.5vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 680% -51%;
+    box-shadow: inset 0 12px 10px;
+}
+
+#t-jupiter .sombra{
+    position: absolute;
+    height: 6vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 476% -52%;
+    box-shadow: inset 0 19px 10px;
+}
+
+#t-saturno .sombra{
+    position: absolute;
+    height: 5vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 724% -57%;
+    box-shadow: inset 0 19px 10px;
+}
+
+#t-urano .sombra{
+    position: absolute;
+    height: 4.5vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 972% -50%;
+    box-shadow: inset 0 15px 10px;
+}
+
+#t-netuno .sombra{
+    position: absolute;
+    height: 7vh;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    translate: 710% -50%;
+    box-shadow: inset 0 17px 10px;
+}
+
+#buraco {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-self: flex-end;
+    margin-left: 80vw;
+}
+
+#buraco img{
+    border-radius: 50%;
+    position: absolute;
+    width: 12vw;
+    aspect-ratio: 1;
+    transition: ease-out 4s;
+    box-shadow: 0 0 100px 50px black;
+}
+
+#buraco img:hover{
+    scale: 6;
+    transform: translateX(-50%);
+}
+
+#informacoes {
+    background: linear-gradient(
+        45deg,
+        rgb(19, 19, 63),
+        black
+    );
+    height: 100vh;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.inf-container{
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    height: 100%;
+}
+
+.img img{
+    max-width: 10vw;
+    padding-top: 30px;
+}
+
+#img-mercurio img{
+    width: 120px;
+    padding-top: 35px;
+}
+#img-venus img{
+    width: 120px;
+}
+#img-terra img{
+    width: 120px;
+}
+#img-marte img{
+    width: 120px;
+}
+#img-jupiter img{
+    width: 115px;
+}
+#img-saturno img{
+    max-width: 17vw;
+    width: 280px;
+    rotate: 30deg;
+}
+#img-urano img{
+    width: 220px;
+}
+#img-netuno img{
+    width: 120px;
+}
+
+
+#placeholder{
+    position: absolute;
+    align-self: flex-end;
+    z-index: 0;
+    width: 70%;
+    height: 70vh;
+    color: white;
+    background: linear-gradient(
+        rgb(19, 19, 63),
+        grey
+    );
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#placeholder p{
+    background: rgba(53, 53, 53, 0.295);
+    border-bottom: solid white 3px;
+    bottom: 0;
+    max-height: 70vh;
+}
+
+.slide img{
+    position: absolute;
+    width: 100px;
+    clip-path: circle(10% at 50% 10%);
+    opacity: 0;
+    transition: 200ms ease-in clip-path;
+}
+
+.inf{
+    height: 50%;
+    width: auto;
+}
+
+.inf:hover .slide img{
+    width: 70vw;
+    height: 70vh;
+    left: 15%;
+    bottom: 0;
+    opacity: 1;
+    clip-path: circle(80%);
+}
